@@ -5,7 +5,7 @@ values <- reactiveValues()
 call_DEG = function(Expression, condition, condition1, condition2){
   withProgress(message = 'Calling Differentially Expressed Genes ', value = 0, {
 
-      library( "DESeq2" )
+      library( "DESeq" )
 
       incProgress(1/4, detail = "loading data")
       tmp = EXP()
