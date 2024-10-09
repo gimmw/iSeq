@@ -218,7 +218,7 @@ shinyServer(func = function(input, output, session) {
     } else if(normalizatedMethod == 3){
       # size factors
        Expression <- csvRead(exp_path)
-      library( "DESeq" )
+      library( "DESeq2" )
       sizeF = estimateSizeFactorsForMatrix(Expression)
       for (i in 1:length(sizeF)){
         Expression[,i] <-  Expression[,i] / sizeF[i]
